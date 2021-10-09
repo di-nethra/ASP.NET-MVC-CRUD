@@ -3,8 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using messageApp3.Models;
 
-namespace messageApp.Data
+namespace messageApp3.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -12,5 +13,6 @@ namespace messageApp.Data
             : base(options)
         {
         }
+        public DbSet<messageApp3.Models.Message> Message { get; set; }
     }
 }
