@@ -1,0 +1,25 @@
+﻿@model ToDoList.Models.ToDo
+
+<div class="container h-100 border p-5" style="margin-top:100px">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <form method="post" asp-action="PostEdit" class="h-100 align-items-center align-items-center">
+                <input asp-for="Id" hidden/>
+                <div class="form-group">
+                    <label class="font-weight-bold" asp-for="Task"></label>
+                    <input type="text" asp-for="Task" class="form-control" id="task" placeholder="Enter Task">
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">Start Time</label>
+                    <input type="text" asp-for="FromTime" class="form-control" id="startTime" placeholder="Enter Start Time">
+                </div>
+                <div class="form-group">
+                    <label class="font-weight-bold">End Time</label>
+                    <input type="text" asp-for="ToTime" class="form-control" id="endTime"  placeholder="Enter End Time">
+                </div>
+
+                <button type="submit" class="btn btn-primary col-12">Edit Task</button>
+            </form>
+        </div>
+    </div>
+</div>

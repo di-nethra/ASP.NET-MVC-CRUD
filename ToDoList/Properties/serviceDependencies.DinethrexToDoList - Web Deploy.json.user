@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2021-11-20T18:42:45.4246836Z"
+    }
+  },
+  "parameters": {
+    "mssql2.subscriptionId": {
+      "Name": "mssql2.subscriptionId",
+      "Type": "subscription",
+      "Value": "1ee295b1-7740-4449-ace4-a051b066c023"
+    },
+    "mssql2.resourceGroupName": {
+      "Name": "mssql2.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ToDoList20211120232243ResourceGroup"
+    }
+  }
+}

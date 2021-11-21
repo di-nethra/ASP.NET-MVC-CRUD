@@ -37,7 +37,30 @@ namespace ToDoList.Controllers
             return RedirectToAction("Index");
         }
 
+        
+        public IActionResult Delete(int id)
+        {
+            var obj = _db.todo.Find(id);
+            _db.todo.Remove(obj);
+            _db.SaveChanges();
 
+            return RedirectToAction("Index");
+        }
+        public IActionResult Edit(int id)
+        {
+            var obj = _db.todo.Find(id);
+
+            return View(obj);
+        }
+
+        [HttpPost]
+        public IActionResult PostEdit(ToDo obj)
+        {
+            _db.todo.Update(obj);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 
 }
